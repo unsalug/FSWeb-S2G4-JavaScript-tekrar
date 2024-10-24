@@ -95,12 +95,26 @@ console.log(CemberinAlani(15));
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
 let ucetambolunenler,
-  enkucuk,
-  enbuyuk,
   ucebolunenlerintoplami,
   besyuzdenkucuksayilar,
   siralisayilar,
   tekraredensayilar;
+
+  let enbuyuk = sayilar[0];
+let enkucuk = sayilar[0];
+
+for (let i = 1; i < sayilar.length; i++) {
+  if (sayilar[i] > enbuyuk) {
+    enbuyuk = sayilar[i];
+  }
+  if (sayilar[i] < enkucuk) {
+    enkucuk = sayilar[i];
+  }
+}
+
+console.log("En küçük:", enkucuk); // En küçük sayı
+console.log("En büyük:", enbuyuk); // En büyük sayı
+
 
 // 3a çözümü
 
