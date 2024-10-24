@@ -100,7 +100,9 @@ let ucetambolunenler,
   siralisayilar,
   tekraredensayilar;
 
-  let enbuyuk = sayilar[0];
+// 3a çözümü
+
+let enbuyuk = sayilar[0];
 let enkucuk = sayilar[0];
 
 for (let i = 1; i < sayilar.length; i++) {
@@ -112,33 +114,57 @@ for (let i = 1; i < sayilar.length; i++) {
   }
 }
 
-console.log("En küçük:", enkucuk); // En küçük sayı
-console.log("En büyük:", enbuyuk); // En büyük sayı
+console.log("En küçük:", enkucuk); 
+console.log("En büyük:", enbuyuk); 
 
-
-// 3a çözümü
-
-/* kodlar buraya */
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler = [];
+sayilar.forEach((sayi) => {
+  if (sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
+});
+
+console.log(ucetambolunenler); 
+
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
+console.log(ucebolunenlerintoplami);
+
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
+console.log(besyuzdenkucuksayilar);
+
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = [...besyuzdenkucuksayilar].sort((a, b) => a - b);
+console.log(siralisayilar);
+
 
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+const sayiFrekans = {};
+
+sayilar.forEach((sayi) => {
+  sayiFrekans[sayi] = (sayiFrekans[sayi] || 0) + 1;
+});
+
+for (const sayi in sayiFrekans) {
+  if (sayiFrekans[sayi] > 1) {
+    tekraredensayilar.push(`${sayi} sayısı ${sayiFrekans[sayi]} kere tekrar edilmiştir`);
+  }
+}
+
+console.log(tekraredensayilar);
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
