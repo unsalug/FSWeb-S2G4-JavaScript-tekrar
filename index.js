@@ -54,8 +54,7 @@ function CemberinCevresi(yaricap) {
   return 2 * pi * yaricap;
 }
 
-// Örnek kullanımı:
-console.log(CemberinCevresi(5)); // Sonuç: 31.4159
+console.log(CemberinCevresi(5));
 
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -68,9 +67,11 @@ console.log(CemberinCevresi(5)); // Sonuç: 31.4159
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yaricap) {
+  return pi * Math.pow(yaricap, 2);
 }
+
+console.log(CemberinAlani(15));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
